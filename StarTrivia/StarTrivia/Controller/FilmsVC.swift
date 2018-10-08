@@ -10,24 +10,31 @@ import UIKit
 
 class FilmsVC: UIViewController, PersonProtocol {
     
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var episodeLbl: UILabel!
+    @IBOutlet weak var directorLbl: UILabel!
+    @IBOutlet weak var producerLbl: UILabel!
+    @IBOutlet weak var releasedLbl: UILabel!
+    @IBOutlet weak var previousBtn: UIButton!
+    @IBOutlet weak var crawlLbl: UITextView!
+    @IBOutlet weak var nextBtn: UIButton!
+    
     var person: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(person.name)
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func previousClicked(_ sender: Any) {
+        setButtonState()
     }
-    */
+    
+    @IBAction func nextClicked(_ sender: Any) {
+        setButtonState()
+    }
+    
+    func setButtonState() {
+        
+    }
 
 }
